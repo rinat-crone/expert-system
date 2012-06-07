@@ -1,0 +1,6 @@
+#questions, #answers, #result, #answer-template { display: none; }
+span {
+  display: block;
+  font: 30pt Georgia;
+  color: #DE0000;
+}

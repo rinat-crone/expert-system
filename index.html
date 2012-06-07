@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Экспертная система</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+    <script src="jquery.js"></script>
+    <script src="js.js"></script>
+  </head>
+  <body>
+    <h1>Оценка рисков</h1>
+    <h2 id="question"></h2>
+    <div id="answers"></div>
+    <div id="answer-template">
+        <input type="radio" name="answer" value="yep" id="answer-yep"> <label for="answer-yep">Да</label><br>
+        <input type="radio" name="answer" value="nope" id="answer-nope"> <label for="answer-nope">Нет</label><br>
+        <input type="submit" value="Далее" id="next">
+    </div>
+    <div id="result"></div>
+  </body>
+</html>
