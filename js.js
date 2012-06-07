@@ -65,7 +65,7 @@ $(function() {
         stars += "&star;";
 
       $.each(this.answers, function(key, value) {
-        if (value)
+        if (!value)
           errors += '<div>' + obj.questions[key][1] + '</div>';
       });
 
