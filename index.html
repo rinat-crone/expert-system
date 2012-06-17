@@ -1,21 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Экспертная система</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" type="text/css" media="screen">
     <link rel="stylesheet" href="style.css" type="text/css" media="screen">
     <script src="jquery.js"></script>
-    <script src="js.js"></script>
   </head>
   <body>
-    <h1>Оценка рисков</h1>
-    <h2 id="question"></h2>
-    <div id="answers"></div>
-    <div id="answer-template">
-        <input type="radio" name="answer" value="yep" id="answer-yep"> <label for="answer-yep">Да</label><br>
-        <input type="radio" name="answer" value="nope" id="answer-nope"> <label for="answer-nope">Нет</label><br>
-        <input type="submit" value="Далее" id="next">
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="index.html">Система оценки рисков</a>
+            </div>
+        </div>
     </div>
-    <div id="result"></div>
+    <div class="container">
+        <div class="row">
+            <div class="span8">
+                <h2 id="question">Выберите виды рисков для оценки</h2>
+            </div>
+        </div>
+        <div id="answers">
+            <form class="form-horizontal" action="#" onsubmit="return false;">
+                <div class="control-group">
+                    <label class="control-label">Выберите:</label>
+                    <div class="controls">
+                        <label for="types-1" class="checkbox">
+                            <input type="checkbox" name="types[]" value="1" id="types-1">
+                            Организационные риски
+                        </label>
+                        <label for="types-2" class="checkbox">
+                            <input type="checkbox" name="types[]" value="2" id="types-2">
+                            Технико-производственные риски
+                        </label>
+                        <label for="types-3" class="checkbox">
+                            <input type="checkbox" name="types[]" value="3" id="types-3">
+                            Риски информационной безопасности
+                        </label>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <input type="submit" value="Начать оценку" id="start" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+        <div id="answer-template">
+            <form class="form-horizontal" action="#" onsubmit="return false;">
+                <div class="control-group">
+                    <label class="control-label">Выберите:</label>
+                    <div class="controls">
+                        <label for="answer-yep" class="radio">
+                            <input type="radio" name="answer" value="yep" id="answer-yep">
+                            Да
+                        </label>
+                        <label for="answer-nope" class="radio">
+                            <input type="radio" name="answer" value="nope" id="answer-nope">
+                            Нет
+                        </label>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <input type="submit" value="Далее &rarr;" id="next" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+        <div id="result">
+            <div class="row"><h1 class="span8">Результаты оценки рисков</h1></div>
+            <div class="row">
+                <div id="results" class="span8">&nbsp;</div>
+                <div id="stars" class="span4"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js.js"></script>
   </body>
 </html>

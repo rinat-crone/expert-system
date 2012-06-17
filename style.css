@@ -1,11 +1,7 @@
-#questions, #answers, #result, #answer-template { display: none; }
-span {
-  display: block;
-  font: 30pt Georgia;
-  color: #DE0000;
-}
-#result div {
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #EEE;
-}
+#questions,#answers,#result,#answer-template{display:none;}
+body{padding-top:40px;}
+h2{margin-top:20px;}
+form{margin-top:30px;}
+#answers{display:block;}
+ol{margin-top:30px;}
+#stars{background:#EEE;text-align:center;font-size:50px;padding:50px 0px;}
